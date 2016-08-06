@@ -1,0 +1,8 @@
+<div>
+  <h2>Speakers</h2>
+  <div>
+    <p *ngFor="let speaker of speakers">
+      <a class="speaker" href="#" [routerLink]="['/speakers', speaker.id]">{{ speaker.firstName + " " + speaker.lastName }}</a> <span class="talks-counter">{{speaker.talks.length}} talk(s)</span>
+    </p>
+  </div>
+</div>

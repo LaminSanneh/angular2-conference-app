@@ -1,0 +1,15 @@
+<div>
+  <h2>Speaker Details</h2>
+  <div *ngIf="speaker" class="details">
+    <p>Name: {{ speaker.firstName }} {{ speaker.lastName }}</p>
+    <p>{{ speaker.summary }}</p>
+  </div>
+  <div *ngIf="speaker" class="talks">
+    <h3>Talks</h3>
+    <div *ngFor="let talk of speaker.talks" class="talk">
+      <p><span>Title:</span> <span>{{talk.title}}</span></p>
+      <p><span>Date:</span> <span>{{talk.date | date:"yMMMdjms"}}</span></p>
+      <p>{{ talk.summary }}</p>
+    </div>
+  </div>
+</div>
